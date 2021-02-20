@@ -19,7 +19,6 @@ router.get("/api/workouts", (req, res) => {
 });
 
 router.put("/api/workouts/:id", (req, res) => {
-  console.log(req.body);
   Workout.findOneAndUpdate({
     _id: req.params.id
   },
@@ -36,8 +35,8 @@ router.put("/api/workouts/:id", (req, res) => {
     });
 });
 
-router.post("/api/workouts", ({ body }, res) => {
-  Workout.create(body)
+router.post("/api/workouts", (req, res) => {  
+  Workout.create({})
     .then(data => {
       res.json(data);
     })
