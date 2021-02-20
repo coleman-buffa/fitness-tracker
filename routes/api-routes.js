@@ -1,13 +1,10 @@
 const router = require("express").Router();
-const db = require("../models");
+const Workout = require("../models/Workout.js");
 
 router.get("/api/workouts", (req, res) => {
   //Do work to return most recent workout
-  console.log("Made it to this place");
-  db.Workout.find({})
-    .sort({ day: 1 })
+  Workout.find({})
     .then(data => {
-      console.log(data);
       res.json(data);
     })
     .catch(err => {
