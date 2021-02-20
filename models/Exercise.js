@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const ExcerciseSchema = new Schema({
+const ExerciseSchema = new Schema({
   type: {
     type: String,
     enum: ["resistance", "cardio"],
@@ -20,11 +20,7 @@ const ExcerciseSchema = new Schema({
   weight: {
     type: Number,
     min: 1
-  },
-  weight: {
-    type: Number,
-    min: 1
-  },
+  },  
   reps: {
     type: Number,
     min: 1
@@ -39,6 +35,6 @@ const ExcerciseSchema = new Schema({
   }
 });
 
-const Excercise = mongoose.model("Exercise", ExcerciseSchema);
+const Exercise = mongoose.model("Exercise", ExerciseSchema);
 
-module.exports = Excercise;
+module.exports = Exercise;
