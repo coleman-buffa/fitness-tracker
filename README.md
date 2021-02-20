@@ -6,7 +6,7 @@ Project description goes here...
 
 | |||
 |:-|:-|:-|
-| [Project Introduction](#portfolio) | [Table of Contents](#table-of-contents) | [Goals and Methods](#goals-and-methods) 
+| [Project Introduction](#fitness-tracker) | [Table of Contents](#table-of-contents) | [Goals and Methods](#goals-and-methods) 
 | [Deployed Link](#deployed-link) | [Technologies](#technologies) | [Author](#author) 
 | [Acknowledgments](#acknowledgments) | [License](#license) |
 ---
