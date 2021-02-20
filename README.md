@@ -1,6 +1,8 @@
 # fitness-tracker
 
-Project description goes here...
+Welcome to your personal fitness tracker! This application will help you keep track of your workouts by letting you input exercises every day. It also will accept workout stats such as duration, number of reps, number of sets, weight lifted, and keep a running total of all your exercises performed. Each day is tracked separetely and a graph of your efforts over the last seven days is also available!
+
+![Walkthrough](./public/assets/demonstration.gif)
 
 ## Table of Contents
 
@@ -13,24 +15,42 @@ Project description goes here...
 
 ## Goals and Methods
 
-Goals and methods
+The primary goal of this build was to continue practicing building MVC full stack applications. This time around I used MongoDB and Mongoose.js for the database. The site is deployed to Heroku which required setting up MongoDB in Atlas. A feature of note for the project is the Mongoose data model. This implementation of the data allows is flexible as many kinds of workouts can be captured:
+```javascript
+const WorkoutSchema = new Schema({
+day: {
+  type: Date,
+  // unique: true,
+  required: "Enter a date for workout"
+},
+exercises: [
+    {
+    type: {
+      type: String,
+      enum: ["resistance", "cardio"],
+      required: "Enter a workout type"
+    },
+    name: {
+      type: String,
+      required: "Enter an excercise name"
+```
 
 ## Deployed Link
 
-[Deployed to Heroku]()
+[Deployed to Heroku](https://cryptic-woodland-44713.herokuapp.com/)
 
 ## Technologies 
 
-|||||
-|:-:|:-:|:-:|:-:|
-| [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) | [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) | [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) | [Node.js](https://nodejs.org/en/)
-| [Express](https://expressjs.com/) | [MySQL Database](https://www.mysql.com/) | [Sequelize](https://sequelize.org/master/index.html) | [Foundation 6](https://get.foundation/)
+||||
+|:-:|:-:|:-:|
+|[Node.js](https://nodejs.org/en/)|[Express](https://expressjs.com/)|[MongoDB](https://www.mongodb.com/) 
+|[mongoose](https://mongoosejs.com/)|[dotenv](https://www.npmjs.com/package/dotenv)
 
 ## Author
 
 Coleman Buffa
 
-* [Git Hub](https://github.com/coleman-buffa)
+* [Git Hub](https://github.com/coleman-buffa/fitness-tracker)
 * [My Portfolio](https://colemanbuffa-portfolio.herokuapp.com/)
 * [LinkedIn](https://www.linkedin.com/in/coleman-buffa/)
 

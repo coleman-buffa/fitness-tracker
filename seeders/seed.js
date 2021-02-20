@@ -1,6 +1,6 @@
 let mongoose = require("mongoose");
 let Workout = require("../models/Workout.js");
-const dotenv = require("dotenv").config();
+// const dotenv = require("dotenv").config();
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
   useNewUrlParser: true,

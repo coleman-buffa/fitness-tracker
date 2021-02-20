@@ -42,17 +42,7 @@ const WorkoutSchema = new Schema({
       }
     }
   ],
-  totalDuration: {
-    type: Number,
-    default: 0 
-  }
 });
-
-WorkoutSchema.methods.updateTotalDuration = function() {
-  exercises.forEach(element => {
-    this.totalDuration += element.duration;
-  });
-}
 
 const Workout = mongoose.model("Workout", WorkoutSchema);
 
