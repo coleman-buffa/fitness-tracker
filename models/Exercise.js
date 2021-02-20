@@ -20,11 +20,7 @@ const ExerciseSchema = new Schema({
   weight: {
     type: Number,
     min: 1
-  },
-  weight: {
-    type: Number,
-    min: 1
-  },
+  },  
   reps: {
     type: Number,
     min: 1
